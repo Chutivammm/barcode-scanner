@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+    <h3>Barcode Scan</h3>
+  
+    <ion-button (click)="scanner()" > Scan now </ion-button>
+  
+    <ion-list *ngIf="barcode != ''">
+      <ion-item>
+        <ion-label fixed> Barcode </ion-label>
+        <ion-input type="text" value="" [(ngModel)]="barcode"></ion-input>
+      </ion-item>
+      <ion-button  (click)="insertData()" > save </ion-button>
+    </ion-list>
+
+  
+  
+</ion-content>
